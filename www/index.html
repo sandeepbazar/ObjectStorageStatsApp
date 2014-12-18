@@ -1,16 +1,169 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
+<!-- 
+* Copyright [2014] [SANDEEP RAMESH PATIL and SANDEEP BAZAR]
+
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+
+*     http://www.apache.org/licenses/LICENSE-2.0
+
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
 -->
-<html>
+
+<!DOCTYPE html>
+<html lang="en">
     <head>
-        <title>ObjectStorage Stats</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8" />
+	<title>Worklight ObjectStore</title>
+
+	<meta name="description" content="User login page" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        
+	<!-- Bootstrap Styles -->
+	<link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+	<link href="css/bootstrap/bootstrap-responsive.min.css" rel="stylesheet" />		
+
+	<!--fonts-->
+        <link rel="stylesheet" href="css/bootstrap/font-OpenSans.css" />
+        <link rel="stylesheet" href="css/bootstrap/font-awesome.min.css" />
+		
+	<!-- page specific plugin styles -->		
+	<link rel="stylesheet" href="css/bootstrap/objectStore.min.css" />
+	<link rel="stylesheet" href="css/bootstrap/objectStore-responsive.min.css" />
+	<link rel="stylesheet" href="css/bootstrap/objectStore-skins.min.css" />		
+						
+	<!--[if lte IE 8]>
+	<link rel="stylesheet" href="css/bootstrap/objectStore-ie.min.css" />
+	<![endif]-->
+
+	<!-- inline styles related to this page -->
+        <style>
+            .avatar {
+		width: 100%;
+		margin: auto;
+		width: 35px;
+		border-radius: 100px;
+		height: 35px;
+		background: #448ed3 ;
+		position: relative;
+		bottom: -1px;
+            }
+            .avatar img {
+		width: 30px;
+		height: 35px;
+		border-radius: 100px;
+		margin: auto;
+                border:3px solid #fff;
+		display: block;
+            }
+	</style>
+        	
     </head>
-    <body>
-        <div>TODO write content</div>
+
+    <body class="login-layout">
+	
+        <div id="objectStoreGUIContent">
+        <!-- Worklight Swift Object Store GUI contnet Start -->
+	    
+            <div>
+	    <!-- Login GUI Content Start -->
+	    	
+		<div class="main-container container-fluid">
+                    <div class="main-content">
+                        <div class="row-fluid">
+                            <div class="span12">
+				<div class="login-container">
+							
+		                    <div class="row-fluid">
+					<div class="center">
+                                            <br/>
+                                            <h4>
+                                                <img src="images/ibm-icon.png" class="avatar" alt="IBM Cloud" />
+                                                <span class="blue">Worklight</span>
+                                                <span class="white">-</span>
+                                                <span class="red">ObjectStore</span>                                        
+                                            </h4>
+                                            <h5 class="white">&copy; IBM India Systems and Technology Lab</h5>											
+					</div>
+                                    </div>												
+                            
+                                    <div class="row-fluid">															
+                                        <div class="position-relative">	                                    
+                                            <div id="login-box" class="login-box visible widget-box no-border">
+						<div class="widget-body">										
+                		                            										
+                                                    <div id="worklightSwiftUIContent_ID">											    
+                                                        <div class="widget-main">
+                                                            <div id="notificationMessage"> </div> <!-- Notification messages on Login Window -->
+                                                            
+                                                            <h4 class="header red lighter bigger">
+                                                                <i class="icon-cloud  blue"></i>
+                                                                Please Enter Your Information
+                                                            </h4>
+                                                            <div class="space-6"></div>
+									
+                                                            <fieldset>
+                                                                <label>
+                                                                    <span class="block input-icon input-icon-right">
+                                                                        <input type="url" class="span12" placeholder="Service Endpoint" id="ServiceEndpoint_ID" value="" />
+                                                                        <i class="icon-external-link"></i>
+                                                                    </span>
+                                                                </label>
+                                                                <label>
+                                                                    <span class="block input-icon input-icon-right">
+                                                                        <input type="text" class="span12" placeholder="Tenant Name" id="Tenant_ID" value="" />
+                                                                        <i class="icon-group"></i>
+                                                                    </span>
+                                                                </label>
+                                                                <label>
+                                                                    <span class="block input-icon input-icon-right">
+                                                                        <input type="text" class="span12" placeholder="User Name" id="Username_ID" value="" />
+                                                                        <i class="icon-user"></i>
+                                                                    </span>
+                                                                </label>
+                                                                <label>
+                                                                    <span class="block input-icon input-icon-right">
+                                                                        <input type="password" class="span12" placeholder="Password" id="Password_ID" value="" />
+                                                                        <i class="icon-lock"></i>
+                                                                    </span>
+                                                                </label>
+                                                                <label>
+                                                                    <input type="radio" id="User_Agreement_ID"/>
+                                                                    <span class="lbl">
+                                                                        I accept the
+                                                                        <a href="#"  onClick="displayUserAgreement()">User Agreement</a>
+                                                                    </span>	
+                                                                </label>	
+                                                                <div class="clearfix">
+                                                                    <button onclick="authenticateUser();" class="width-65 pull-right btn btn-small btn-success">
+                                                                        Login
+                                                                        <i class="icon-arrow-right icon-on-right"></i>
+                                                                    </button>
+                                                                </div>														
+                                                            </fieldset>	
+                                                            
+                                                        </div><!--/widget-main-->
+                                                    </div><!-- worklightSwiftUIContent_ID -->																									
+                                                </div><!--/widget-body-->
+                                            </div> <!--/login-box-->																	    
+                                        </div><!--/position-relative-->
+                                    </div>
+						
+                                </div> <!-- login-container -->						
+                            </div><!--/.span 12-->
+                        </div><!--/.row-fluid-->
+                    </div>
+                </div><!--/.main-container-->
+                <!-- Login GUI Content End -->
+            </div>    
+	    	
+        <!-- Worklight Swift Object Store GUI contnet end -->
+        </div>		
+		
     </body>
 </html>
