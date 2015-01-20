@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+
 <!-- 
 * Copyright [2014] [SANDEEP RAMESH PATIL and SANDEEP BAZAR]
 
@@ -14,11 +16,10 @@
 * limitations under the License.
 -->
 
-<!DOCTYPE html>
 <html lang="en">
     <head>
 	<meta charset="utf-8" />
-	<title>Worklight ObjectStore</title>
+	<title>ObjectStore Stats Login</title>
 
 	<meta name="description" content="User login page" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -28,7 +29,7 @@
 	<link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
 	<link href="css/bootstrap/bootstrap-responsive.min.css" rel="stylesheet" />		
 
-	<!--fonts-->
+	<!-- fonts -->
         <link rel="stylesheet" href="css/bootstrap/font-OpenSans.css" />
         <link rel="stylesheet" href="css/bootstrap/font-awesome.min.css" />
 		
@@ -61,8 +62,8 @@
                 border:3px solid #fff;
 		display: block;
             }
-	</style>
-        	
+	</style>        	
+        
     </head>
 
     <body class="login-layout">
@@ -133,6 +134,12 @@
                                                                     </span>
                                                                 </label>
                                                                 <label>
+                                                                    <span class="block input-icon input-icon-right">
+                                                                        <input type="text" class="span12" placeholder="Path: /sdcard/Download/" id="Directory_Path_ID" value="Path: /sdcard/Download/" readonly />
+                                                                        <i class="icon-folder-open"></i>
+                                                                    </span>
+                                                                </label>                                                                
+                                                                <label>
                                                                     <input type="radio" id="User_Agreement_ID"/>
                                                                     <span class="lbl">
                                                                         I accept the
@@ -164,6 +171,47 @@
 	    	
         <!-- Worklight Swift Object Store GUI contnet end -->
         </div>		
-		
+
+        <!-- Modal -->
+	<div class="modal fade" id="Modal_ID" tabindex="-1" role="dialog" aria-labelledby="Modal_Label_ID" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="Modal_Title_ID"> </h4>
+                    </div>
+                    <div class="modal-body" id="Modal_body_ID">
+                    </div>
+                    <div class="modal-footer" id="Modal_footer_ID">
+                    </div>
+    		</div>
+            </div>
+	</div>
+                
+        
+        <!-- JQuery Scripts Start -->
+        <script type="text/javascript">
+			window.jQuery || document.write("<script src='js/jquery/jquery-2.0.3.min.js'>"+"<"+"/script>");
+        </script>
+
+        <!--<![endif]-->
+            <!--[if IE]>
+            <script type="text/javascript">
+ 		window.jQuery || document.write("<script src='js/jquery/jquery-1.10.2.min.js'>"+"<"+"/script>");
+            </script>
+        <![endif]-->
+
+        <script type="text/javascript">
+            if("ontouchend" in document) document.write("<script src='js/jquery/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+        </script>		        
+        <!-- JQuery Scripts Start End -->        
+                
+        <!-- BootStap API calls -->
+	<script src="js/bootstrap/bootstrap.js"></script>        
+	<script src="js/bootstrap/bootstrap.min.js"></script>                        
+        
+        <!-- Genral API calls -->
+	<script src="js/actions.js"></script>        
+                
     </body>
 </html>
